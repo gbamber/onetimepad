@@ -21,6 +21,7 @@ OneTimePad is written and copyright (c) 2025 gbamber
   - [Usage](#usage)
   - [Description](#description)
 - [Build](#build)
+  - [Testing](#testing)
 - [License](#license)
   - [Software](#software)
   - [Documentation](#documentation)
@@ -72,7 +73,16 @@ I'm using CMake as a build system. The `CMakeLists.txt` is included in the git r
     cmake ..
     make
 
-The code commpiles with `gcc 12.2.0` and `clang 15.0.6`. 
+The code commpiles with `gcc 12.2.0` and `clang 15.0.6`. At least on my machine.
+
+### Testing
+
+Currently there are no unit-tests included with the repo. But there is one simple 
+test script in `./examples`. It generates a pad from `/dev/urandom` and two clear-text
+files that are then encrypted, decrypted and compared. Usage:
+
+    cd ./examples
+    ./test.sh
 
 ## License
 
